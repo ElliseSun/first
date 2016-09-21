@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var i=1;
+		var txt='Welcome to my world !!';
+			// txt=txt.fontsize('6')
+		var colors=['F12B2B','8129F0','29E2F5','29F74E','F1EB37','EA8235'];
+		
+		window.onload=change;
+		function change(){
+
+			// if(i>txt.length){
+			// 	i=1;
+			// }
+			var left= txt.substr(0,i);
+			var right= txt.substr(i);
+			// alert(left)
+			i++;
+			var j=Math.floor(Math.random()*colors.length);
+			document.body.innerHTML='<font color='+colors[j]+'font size='+50+'px'+'>'+left+'</font>'+right;
+
+
+			setTimeout('change()', 50);
+			
+		}
+	</script>
+</head>
+<body style="background-color:#000;">
+
+</body>
+</html>
